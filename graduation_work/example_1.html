@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      body {
+        background-color: lightgray;
+      }
+      .about {
+        margin-top: 1em;
+        padding: 40px 15px;
+        background-color: white;
+      }
+      .question {
+        margin-top: 1em;
+        padding: 40px 15px;
+        background-color: white;
+      }
+      .figure {
+        margin-top: 1em;
+        padding: 40px 15px;
+        background-color: #e1e1e1;
+        margin-bottom: 1em;
+      }
+      footer {
+        width: 100%;
+        height: 120px; 
+        text-align: center;
+        padding: 50px 0;
+        background-color: whitesmoke;
+      }
+      .footer-text {
+        color: #fff;
+      }
+
+    </style>
+
+    <title>競馬展開分析ツール</title>
+  </head>
+  <body>
+     <!--ナビゲーションバー-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand">競馬展開分析ツール</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                example
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="example_1.html">天皇賞(秋)</a></li>
+                <li><a class="dropdown-item" href="example_2.html">日本ダービー</a></li>
+                <!--<li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">研究結果</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>-->
+          </ul>
+          <!--<form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>-->
+        </div>
+      </div>
+    </nav>  
+
+    <!-- 表題と説明-->
+    <div class="container">
+      <div class="about">
+        <h1>例1 : 天皇賞(秋)</h1>
+        <p class="lead">JavaScriptにデータを埋め込み、操作しています。</br>2022年10月30日に東京競馬場で行われた、第166回天皇賞(秋)の展開分析をします。</p>
+        <h3>結果</h3>
+        <p>1着 : 7 イクイノックス  C.ルメール</br>2着 : 3 パンサラッサ  吉田豊</br>3着 : 5 ダノンベルーガ  川田将雅</p>
+        <a href="https://www.jra.go.jp/datafile/seiseki/g1/akiten/result/akiten2022.html">JRA・天皇賞(秋)</a>
+      </div>
+    </div>
+
+    <!--質問_フォームで作って、JavaScriptで取得する-->
+    <article>
+      <div class="container">
+        <div class="question">
+          <div class="row g-3">
+            <div class="col">
+              <h3>入力データ</h3>
+              <p>逃げ: 3</br>
+              先行 : 12, 10, 9, 1, 8, 6, 2, 13</br>
+              中団 : 7, 5, 4</br>
+              後方 : 11, 14, 15</p>
+            </div>
+          </div>
+
+          <!--番号と色の対応表-->
+          <div class="table-responsive">
+            <table class="table table-bordered border-dark">
+              <tr>
+                <th>馬番</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+                <th>13</th>
+                <th>14</th>
+                <th>15</th>
+                <th>16</th>
+                <th>17</th>
+                <th>18</th>
+              </tr>
+              <tr>
+                <th>色</th>
+                <td style="background: white"></td>
+                <td style="background: lavender"></td>
+                <td style="background: black"></td>
+                <td style="background: gray"></td>
+                <td style="background: crimson"></td>
+                <td style="background: lightcoral"></td>
+                <td style="background: dodgerblue"></td>
+                <td style="background: skyblue"></td>
+                <td style="background: yellow"></td>
+                <td style="background: papayawhip"></td>
+                <td style="background: forestgreen"></td>
+                <td style="background: lightgreen"></td>
+                <td style="background: orange"></td>
+                <td style="background: moccasin"></td>
+                <td style="background: chocolate"></td>
+                <td style="background: lightpink"></td>
+                <td style="background: plum"></td>
+                <td style="background: hotpink"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+    </article>
+
+    <article>
+      <div class="container">
+        <div class="figure">
+          <h2>展開予想図</h2>
+          <div id="p5CanvasContainer"> </div>
+        </div>
+      </div>
+    </article>
+
+    <footer>
+      <p>このサイトはクワバラキュウゴの卒業制作物です。</br>河合勝彦ゼミ</p>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <!--p5.jsの読み込み-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js" integrity="sha512-WJXVjqeINVpi5XXJ2jn0BSCfp0y80IKrYh731gLRnkAS9TKc5KNt/OfLtu+fCueqdWniouJ1ubM+VI/hbo7POQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--JavaScriptの読み込み-->
+    <script type="text/javascript" src='example_1.js'></script>
+    
+  </body>
+</html>
