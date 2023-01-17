@@ -22,11 +22,10 @@
         padding: 40px 15px;
         background-color: white;
       }
-      .figure {
+      .info {
         margin-top: 1em;
         padding: 40px 15px;
-        background-color: #e1e1e1;
-        margin-bottom: 1em;
+        background-color: white;
       }
       footer {
         width: 100%;
@@ -80,80 +79,50 @@
           </form>-->
         </div>
       </div>
-    </nav>
+    </nav>  
 
     <!-- 表題と説明-->
     <div class="container">
       <div class="about">
-        <h1>例2 : 日本ダービー</h1>
-        <p class="lead">JavaScriptにデータを埋め込み、操作しています。</br>2022年5月29日に東京競馬場で行われた、第89回日本ダービーの展開分析をします。</p>
-        <h3>結果</h3>
-        <p>1着 : 13 ドウデュース  武豊</br>2着 : 18 イクイノックス  C.ルメール</br>3着 : 3 アスクビクターモア  田辺裕信</p>
-        <a href="https://www.jra.go.jp/datafile/seiseki/g1/derby/result/derby2022.html">JRA・日本ダービー</a>
+        <h1>研究概要</h1>
+        <h2>目的</h2>
+        <ul>
+          <li>趣味の競馬をより楽しむことができるツール</li>
+          <li>制作物によって、競馬文化を支えること</li>
+        </ul>
+
+        <h2>展開の重要性</h2>
+        <p class="lead">レースで走る馬のレベル・能力が拮抗しやすい上位のレースほど、展開を重要視すべき</p>
+        <h4>競馬の特徴である以下の三点から示す</h4>
+        <ul>
+          <li>
+            着順　相対的な順位であり、タイムではない
+          </li>
+          <li>
+            オープンレーン　各馬が走るレーンは決まっていない
+          </li>
+          <li>
+            脚質　どのペースで、どこから全速力で走れば最も良いパフォーマンスが出せるかは、馬によって異なる
+          </li>
+        </ul>
+
+        <h2>→競馬展開分析ツールの有用性</h2>
       </div>
     </div>
 
-    <!--質問_フォームで作って、JavaScriptで取得する-->
+
     <article>
       <div class="container">
         <div class="question">
-          <div class="row g-3">
-            <div class="col">
-              <h3>入力データ</h3>
-              <p>逃げ: 14</br>
-              先行 : 3, 5, 8</br>
-              中団 : 6, 17, 2, 1, 9, 4, 15, 12, 7</br>
-              後方 : 13, 16, 18, 10, 11</p>
-            </div>
-          </div>
+          <h1>反省点</h1>
+          <ul>
+            <li>インタラクティブ性の確保</li>
+            <p>情報の受け渡しがうまくいかず、Homeの質問は機能していない。デザインイメージとして残している。</p>
+            <li>p5.jsでの細かい動きの設定</li>
+            <p>実際のレースに近い展開図の設定や、アニメーションをつけることができなかった。</p>
+          </ul>
 
-          <!--番号と色の対応表-->
-          <div class="table-responsive">
-            <table class="table table-bordered border-dark">
-              <tr>
-                <th>馬番</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
-                <th>10</th>
-                <th>11</th>
-                <th>12</th>
-                <th>13</th>
-                <th>14</th>
-                <th>15</th>
-                <th>16</th>
-                <th>17</th>
-                <th>18</th>
-              </tr>
-              <tr>
-                <th>色</th>
-                <td style="background: white"></td>
-                <td style="background: lavender"></td>
-                <td style="background: black"></td>
-                <td style="background: gray"></td>
-                <td style="background: crimson"></td>
-                <td style="background: lightcoral"></td>
-                <td style="background: dodgerblue"></td>
-                <td style="background: skyblue"></td>
-                <td style="background: yellow"></td>
-                <td style="background: papayawhip"></td>
-                <td style="background: forestgreen"></td>
-                <td style="background: lightgreen"></td>
-                <td style="background: orange"></td>
-                <td style="background: moccasin"></td>
-                <td style="background: chocolate"></td>
-                <td style="background: lightpink"></td>
-                <td style="background: plum"></td>
-                <td style="background: hotpink"></td>
-              </tr>
-            </table>
-          </div>
+          <h2>→言語に対して知識不足だった。</h2>
         </div>
       </div>
       
@@ -161,9 +130,9 @@
 
     <article>
       <div class="container">
-        <div class="figure">
-          <h2>展開予想図</h2>
-          <div id="p5CanvasContainer"> </div>
+        <div class="info">
+          <p>GitHubに、実際の卒業制作最終発表で使用したプレゼンをUpしています。
+          </br>このページはプレゼンと同様の内容で、再構築したものです。</p>
         </div>
       </div>
     </article>
@@ -184,10 +153,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
 
-    <!--p5.jsの読み込み-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js" integrity="sha512-WJXVjqeINVpi5XXJ2jn0BSCfp0y80IKrYh731gLRnkAS9TKc5KNt/OfLtu+fCueqdWniouJ1ubM+VI/hbo7POQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!--JavaScriptの読み込み-->
-    <script type="text/javascript" src='example_2.js'></script>
     
   </body>
 </html>
